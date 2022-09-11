@@ -27,7 +27,7 @@
                     <label for="">Course Type</label>
                     <select class="form-control" name="course_type"id=""value="{{$course->course_type}}">
                     <option>SELECT TYPE</option>
-                    <option>CSE</option>
+                     <option value="CSE"{{$course->course_type=='CSE'? 'selected':''}}>CSE</option>
                     <option>ECONOMICS</option>
                     <option>MATH</option>
                     <option>LAW</option>
