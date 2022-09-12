@@ -15,8 +15,10 @@
             <th>Id</th>
             <th>Name</th>
             <th>Price</th>
+            
         </thead>
           <tbody>
+          @if($products)  
             @foreach($products as $p)
             <tr>
                 <td>{{$p['id']}}</td>
@@ -24,6 +26,11 @@
                 <td>{{$p['price']}}</td>
             </tr>
             @endforeach
+         @else 
+           <tr>
+             <td colspan="3" class="text-center">No data found</td>
+           </tr> 
+          @endif  
           </tbody>
     </table>
 </div>
