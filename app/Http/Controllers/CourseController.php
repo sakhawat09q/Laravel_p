@@ -15,12 +15,14 @@ class CourseController extends Controller
         $course_n=$req->course_name;
         $course_c=$req->course_code;
         $course_t=$req->course_type;
+        $course_j=$req->join_date;
         
         //Query Builder Syntax
         DB::table('courses')->insert([
             'course_name' => $course_n,  //here course name is the database table name where data insert
             'course_type' => $course_t,
-            'course_code' => $course_c
+            'course_code' => $course_c,
+            'join_date'  =>$course_j
             
         ]);
     }
