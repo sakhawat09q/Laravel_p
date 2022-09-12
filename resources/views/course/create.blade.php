@@ -33,6 +33,17 @@
                     <option>LAW</option>
                     </select>
                 </div>
+                
+                </div>
+                <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                  <label for="date" class="btn btn-info">Join Date</label>
+                    <input type="date"name="join_date">
+                  </div>
+                </div>
+                </div>
+                
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
