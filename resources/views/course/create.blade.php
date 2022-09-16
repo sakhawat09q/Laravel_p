@@ -9,6 +9,13 @@
 
 </head>
 <body>
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
     <div class="container">
         <div class="row">
             <div class="col-6">
@@ -33,21 +40,55 @@
                     <option>LAW</option>
                     </select>
                 </div>
-                
-                </div>
+                <div class="form-group">
+                  <label>Active Status</label>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" name="active_status" class="form-check-input" value="1">Is_Active
+                       </label>
+                    </div>
+               </div>
                 <div class="row">
-                <div class="col-6">
+                 <div class="col-6">
                   <div class="form-group">
-                  <label for="date" class="btn btn-info">Join Date</label>
+                    <label for="date" class="btn btn-info">Join Date</label>
                     <input type="date"name="join_date">
                   </div>
+                 </div>
                 </div>
+                <p>Gender</p>
+                <div class="form-group mt-2 ml-2">
+                    <input type="radio" class="form-check-input" name="gender" value="Male">
+                    <label class="mr-4">Male</label>
+                    
+                    <input type="radio" class="form-check-input" name="gender" value="Female">
+                    <label class="mr-4">Female</label>
+                    
+                    <input type="radio" class="form-check-input"  name="gender" value="Other">
+                    <label class="mr-4">Other</label>
+
+ 
                 </div>
-                
+
+            <div class="form-group">
+                <label>Select your skill here</label>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="option[]" value="Developing">Developing
+                    </label>
                 </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="option[]" value="Networking">Networking
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="option[]" value="Circuiting" >Circuiting
+                    </label>
+                </div>
+            </div>
+              
                 <button type="submit" class="btn btn-success">Submit</button>
                 <a href="{{URL::to('courses')}}"type="button" class="btn btn-dark">Courses List</a>
                 
