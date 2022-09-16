@@ -22,6 +22,10 @@
             <th>Name</th>
             <th>Type</th>
             <th>Code</th>
+            <th>Gender</th>
+            <th>Skills</th>
+            <th>Join Date</th>
+            <th>Active Status</th>
             <th>Action</th>
             
         </thead>
@@ -33,6 +37,11 @@
                 <td>{{$c->course_name}}</td>
                 <td>{{$c->course_type}}</td>
                 <td>{{$c->course_code}}</td>
+                <td>{{$c->Gender}}</td>
+                <td>{{$c->skill}}</td>
+                <td>{{$c->join_date}}</td>
+                <td>{{$c->active_status == 1 ? 'Yes' :'No'}}</td>
+                
                 <td>
                     <a href="{{URL::to('edit-course/'.$c->id)}}"><i title="Edit" class="fa fa-pencil" style=color:dark></i></a>
                     <a href="{{URL::to('delete-course/'.$c->id)}}"><i title="Delete" class="fa fa-trash" style=color:dark></i></a>
