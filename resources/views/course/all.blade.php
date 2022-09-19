@@ -38,7 +38,15 @@
                 <td>{{$c->course_type}}</td>
                 <td>{{$c->course_code}}</td>
                 <td>{{$c->Gender}}</td>
-                <td>{{$c->skill}}</td>
+                //<td>{{$c->skill}}</td>
+                <td>
+                php
+                    $skills = json_decode($c->skill)
+                @endphp
+                @foreach($skills as $s)
+                    {{ $s }},
+                @endforeach
+                </td>
                 <td>{{$c->join_date}}</td>
                 <td>{{$c->active_status == 1 ? 'Yes' :'No'}}</td>
                 
