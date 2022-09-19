@@ -40,7 +40,7 @@
                 <td>{{$c->Gender}}</td>
                 //<td>{{$c->skill}}</td>
                 <td>
-                php
+                @php
                     $skills = json_decode($c->skill)
                 @endphp
                 @foreach($skills as $s)
